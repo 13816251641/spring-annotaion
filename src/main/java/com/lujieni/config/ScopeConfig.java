@@ -17,7 +17,7 @@ public class ScopeConfig {
      *
      * @return
      * prototype:多实例:ioc容器启动并不会去调用方法创建对象放在容器中,而是在每次获取的时候
-     * singleton:单实例(默认值):ioc容器启动会调用方法创建对象放到ioc容器中
+     * singleton:单实例(默认值):ioc容器启动会自动调用方法创建对象放到ioc容器中
      *
      * 懒加载@Lazy:
      *        单实例bean:默认在容器启动的时候创建对象;
