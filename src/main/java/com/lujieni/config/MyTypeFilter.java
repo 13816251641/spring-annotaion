@@ -12,6 +12,7 @@ import java.io.IOException;
 /**
  * @Auther ljn
  * @Date 2020/2/15
+ * MyTypeFilter会被多次调用!!!
  */
 public class MyTypeFilter implements TypeFilter {
 

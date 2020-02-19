@@ -18,7 +18,7 @@ public class ConditionalConfig {
 
     /**
      * @Conditional({Condition}):按照一定的条件进行判断,满足条件给容器中注册bean
-     * 只要实现Condition接口即可
+     * 只要实现Condition接口即可,按照返回的boolean值来判断是否要装配bean
      * @return
      */
     @Conditional(WindowsCondition.class)

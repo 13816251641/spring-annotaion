@@ -2,10 +2,12 @@ package com.lujieni.test;
 
 import com.lujieni.bean.Person;
 import com.lujieni.config.ConditionalConfig;
+import com.lujieni.config.ImportConfig;
 import com.lujieni.config.MyConfig;
 import com.lujieni.config.ScopeConfig;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Import;
 import org.springframework.core.env.ConfigurableEnvironment;
 
 import java.util.Map;
@@ -51,6 +53,18 @@ public class IocTestInJavaConfig {
 
         Map<String, Person> persons = applicationContext.getBeansOfType(Person.class);
         System.out.println(persons);
+    }
+
+    /**
+     * 测试@Import标签的使用
+     */
+    @Test
+    public void test04(){
+        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(ImportConfig.class);
+        String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
+        for (String name:beanDefinitionNames){
+            System.out.println(name);
+        }
     }
 
 
