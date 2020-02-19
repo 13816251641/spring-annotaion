@@ -1,5 +1,6 @@
 package com.lujieni.config;
 
+import com.lujieni.Importselector.MyImportSelector;
 import com.lujieni.bean.Red;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -15,7 +16,7 @@ import org.springframework.context.annotation.Import;
  *     1) @Import(要导入容器的组件):容器中就会自动注册这个组件.id默认是包名+类名
  */
 @Configuration
-@Import(Red.class)
+@Import({Red.class, MyImportSelector.class})
 public class ImportConfig {
 
 
