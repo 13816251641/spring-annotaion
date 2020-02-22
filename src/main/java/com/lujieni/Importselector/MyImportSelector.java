@@ -15,7 +15,6 @@ public class MyImportSelector implements ImportSelector {
         AnnotationMetadata:当前标注@Import注解的类的所有注解信息
      */
     public String[] selectImports(AnnotationMetadata importingClassMetadata) {
-
         return new String[]{"com.lujieni.bean.Blue"};
     }
 }
